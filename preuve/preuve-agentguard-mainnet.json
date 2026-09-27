@@ -1,0 +1,95 @@
+{
+  "date": "2026-09-27T14:17:15.739Z",
+  "reseau": "Arc mainnet (chain id 5042)",
+  "coffre": "0xf4e6ea95ec718ef1df81a91ea42f4aec4910eb21",
+  "proprietaire": "0xF9A2aC9DDbeC773413AE72975B8B169abF784c25",
+  "agent_de_demo": "0x7968084E82fcCf88D8F5964900f4E001Cf048658",
+  "solde_proprietaire_debut_usdc": "2.470635",
+  "solde_proprietaire_fin_usdc": "2.452618",
+  "argent_restant_dans_le_coffre_usdc": "0",
+  "transactions": [
+    {
+      "etape": "setAgent",
+      "hash": "0xac6530774a48964d3d60cd25510d4ca0c45141b6563ad0d57e5c7e3427c1e12a",
+      "statut": "success",
+      "bloc": 23041050
+    },
+    {
+      "etape": "setAllowed(moi)",
+      "hash": "0x65cc03f84e5d1748d2b756effe77c2792eb26be9c4e7f9605264c6cf963289f0",
+      "statut": "success",
+      "bloc": 23041053
+    },
+    {
+      "etape": "gaz de l'agent finance",
+      "hash": "0x880475b6808a62fb148dd03deff34913d19fdc7938017e4f19de6384ae67c4c5",
+      "statut": "success",
+      "bloc": 23041055
+    },
+    {
+      "etape": "approbation 0,5 USDC",
+      "hash": "0xf3b7df40aa624579a0262168ece80adceebc155affb884a355f6e5677ac2d38d",
+      "statut": "success",
+      "bloc": 23041063
+    },
+    {
+      "etape": "depot 0,5 USDC",
+      "hash": "0xce8255d5a134e61b028a530550e3b9158d277f76d4e1b51c3721599b98ef3d2f",
+      "statut": "success",
+      "bloc": 23041065
+    },
+    {
+      "etape": "paiement de 0,1 USDC",
+      "hash": "0x67b03db5c22cabc3b15f36b897025eeed9a2502e825c2f975a4c923f475795ce",
+      "statut": "success",
+      "bloc": 23041068
+    },
+    {
+      "etape": "tentative 0,75 USDC (simulation, non signee)",
+      "refus": "refuse par la blockchain (OverPerTx / NotAgent) - voir motifs_de_refus"
+    },
+    {
+      "etape": "revoke",
+      "hash": "0x526201e313fd5569cad209faa0813dcf0416b3d25c9932a8222832e254c4b1a6",
+      "statut": "success",
+      "bloc": 23041071
+    },
+    {
+      "etape": "tentative apres revocation (simulation)",
+      "refus": "refuse par la blockchain (OverPerTx / NotAgent) - voir motifs_de_refus"
+    },
+    {
+      "etape": "retrait de 0.4 USDC",
+      "hash": "0x248b2eca9de4eae24634c83ce3e34d19ae6071f5d8d106b14e99a215b2957bec",
+      "statut": "success",
+      "bloc": 23041073
+    },
+    {
+      "etape": "retour du gaz restant (0.038033539999901677 USDC)",
+      "hash": "0x10af1e699c99c6b8ffb7138aa92eea582567bfca9b6036583dca9b54292bffa0",
+      "statut": "success",
+      "bloc": 23041075
+    }
+  ],
+  "motifs_de_refus_rejoues_au_bloc": 23041065,
+  "motifs_de_refus": [
+    {
+      "essai": "l'agent depasse le plafond par transaction (0,75 USDC > 0,5)",
+      "appelant": "0x7968084E82fcCf88D8F5964900f4E001Cf048658",
+      "montant_usdc": "0.75",
+      "motif": "OverPerTx"
+    },
+    {
+      "essai": "un agent NON designe essaie de payer",
+      "appelant": "0x000000000000000000000000000000000000dEaD",
+      "montant_usdc": "0.1",
+      "motif": "NotAgent"
+    },
+    {
+      "essai": "l'agent paie un destinataire NON autorise",
+      "appelant": "0x7968084E82fcCf88D8F5964900f4E001Cf048658",
+      "montant_usdc": "0.1",
+      "motif": "RecipientNotAllowed"
+    }
+  ]
+}
